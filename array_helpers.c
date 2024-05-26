@@ -67,6 +67,9 @@ unsigned int array_from_file(CharacterList array, const char *filepath) {
 
     char s_charttype, s_alignment;
     int res=fscanf(file, " [%c %c] ", &s_charttype, &s_alignment);
+    if(res == EOF){
+        return;//llega a fin del file sale del programa 
+    }
     if (res != 2) {
         fprintf(stderr, "Error reading type and alignment.\n");
         exit(EXIT_FAILURE);
