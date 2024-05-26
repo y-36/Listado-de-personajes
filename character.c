@@ -32,11 +32,7 @@ Character character_from_file_line(FILE *file, name_t name, alignment_t alignmen
       fprintf(stderr, "Error reading character attributes.\n");
       exit(EXIT_FAILURE);
   }
-
-  /*
-   * COMPLETARDO
-   *
-   */
+  /* COMPLETARDO */
     Character character;
     character.name = name;
     character.life = life;
